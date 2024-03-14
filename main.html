@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <style>
+    body{
+      background: white;
+
+    }
+    .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.image-container {
+  margin-left: auto; /* Empurra a imagem para a direita */
+
+}
+
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza os botões horizontalmente */
+      justify-content: center; /* Centraliza os botões verticalmente */
+      position: absolute;
+      top: 5%;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+  height: 40px;
+  font-size: 20px;
+  margin: 10px;
+  border: 1.75px solid black; /* Gray border */
+  border-radius: 10px; /* Adicione bordas arredondadas */
+    
+}
+
+    .register-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza os botões horizontalmente */
+      justify-content: center; /* Centraliza os botões verticalmente */
+      position: absolute;
+      top: 5%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+  height: 40px;
+  font-size: 20px;
+  margin: 10px;
+  border: 1.75px solid black; /* Gray border */
+  border-radius: 10px; /* Adicione bordas arredondadas */
+
+    }
+
+
+    #forgot-password {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        top: 95%;
+        left: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    #texto-div {
+        position: absolute;
+        top: 37.5%;
+        left: 15.5%;
+        transform: translate(-50%, -50%);
+        width: 80%; /* Defina a largura desejada */
+        padding: 20px; /* Adicione espaço interno */
+        border-radius: 5px; /* Adicione bordas arredondadas */
+        text-align: center; /* Centralize o texto */
+        font-size: 16px; /* Defina o tamanho da fonte */
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    }
+
+    .login-box {
+    position: absolute;
+    top: 65%; /* Posiciona a 65% da parte superior da janela do navegador */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #ccc; /* Gray border */
+    padding: 150px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    width: 1000px; /* Set a width for the box */
+    max-width: 100%; /* Define a largura máxima para evitar que a caixa seja mais larga que a tela */
+}
+
+  .heading{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  }
+
+  .table{
+    position: absolute;
+    top: 60%; /* Posiciona a 65% da parte superior da janela do navegador */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    width: 1300px; /* Set a width for the box */
+    max-width: 100%; /* Define a largura máxima para evitar que a caixa seja mais larga que a tela */
+    border: 3px solid gray;
+
+  }
+
+  .table thead{
+    background-color: gray;
+  }
+
+  .table thead tr th {
+  font-size: 18px; /* Valor menor */
+  font-weight: 600;
+  letter-spacing: 0.70px;
+  color: #FFFFFF;
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+  border: 3px solid #dee2e685;
+}
+
+.table thead tr td {
+  font-size: 12px; /* Valor menor */
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: #f1f1f1;
+  background-color: #3c3f44;
+  padding: 8px;
+  text-align: center;
+  border: 3px solid #dee2e685;
+}
+
+
+  </style>
+</head>
+<body>
+    <div class="title">
+        <h1 style="color:black;">Olá Marcelo!&#160;&#160;</h1>
+        <div class="image-container">
+          <img src="383-waving-hand-1-coloring-page.png" height="30">
+        </div>
+      </div>
+      
+
+
+    <input type="button" class="button-container" value="Terminar Sessão" onclick="window.location.href='Login.html'">
+    <input type="button" class="register-container" value="Gerir Perfil" onclick="window.location.href='Register.html'">
+
+<div id="texto-div">
+    <p>
+        <h1 style="color:black;">As minha tarefas </h1></p>
+</div>
+
+<div class="table-container">
+  <h1 class="heading"></h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Tarefa</th>
+        <th>Data</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Tarefa">Encomenda</td>
+        <td data-label="Data">1 jan 2021</td>
+        <td data-label="Estado">Disponivel</td>
+      </tr>
+      <tr>
+        <td data-label="Tarefa">Encomenda</td>
+        <td data-label="Data">1 jan 2021</td>
+        <td data-label="Estado">Disponivel</td>
+      </tr>
+      <tr>
+        <td data-label="Tarefa">Encomenda</td>
+        <td data-label="Data">1 jan 2021</td>
+        <td data-label="Estado">Disponivel</td>
+      </tr>
+      <tr>
+        <td data-label="Tarefa">Encomenda</td>
+        <td data-label="Data">1 jan 2021</td>
+        <td data-label="Estado">Disponivel</td>
+      </tr>
+      <tr>
+        <td data-label="Tarefa">Encomenda</td>
+        <td data-label="Data">1 jan 2021</td>
+        <td data-label="Estado">Disponivel</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div style="text-align: left;">
+  <img src="Mountain-logo-Design-Graphics-9785421-1-580x435.png" height="300">
+</div>
+
+
+
+<div class="line">
+
+  <p>Copyright 2024 - All rights reserved by Diogo Machado.</p>
+
+</div>
+
+</body>
+</html>
