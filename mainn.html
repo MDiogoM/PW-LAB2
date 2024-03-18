@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <style>
+    body{
+      background: gray;
+
+    }
+     .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza os botões horizontalmente */
+      justify-content: center; /* Centraliza os botões verticalmente */
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza os botões horizontalmente */
+      justify-content: center; /* Centraliza os botões verticalmente */
+      position: absolute;
+      top: 50%;
+      left: 49.5%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+  height: 40px;
+  font-size: 20px;
+  margin: 10px;
+    }
+
+    .register-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza os botões horizontalmente */
+      justify-content: center; /* Centraliza os botões verticalmente */
+      position: absolute;
+      top: 60%;
+      left: 49.5%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+  height: 40px;
+  font-size: 20px;
+  margin: 10px;
+    }
+
+    #forgot-password {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        top: 95%;
+        left: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="center">
+    
+    <div class="title">
+      <h1 style="color:black;">MountainWeb</h1>
+    </div>
+
+    <input type="button" class="button-container" value="Login" onclick="window.location.href='Login.html'">
+    <input type="button" class="register-container" value="Register" onclick="window.location.href='Register.html'">
+
+
+    <div id="forgot-password" onclick="window.location.href='forgot_password.html'">Forgot Password?</div>
+
+  </div>
+
+  <div style="text-align: center;">
+    <img src="Mountain-logo-Design-Graphics-9785421-1-580x435.png" height="300">
+</div>
+
+<div class="line">
+
+  <p>Copyright 2024 - All rights reserved by Diogo Machado.</p>
+
+</div>
+
+</body>
+</html>

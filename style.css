@@ -1,48 +1,220 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-}
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background: gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
 
-.logo {
-    font-size: 2em;
-    color: #fff;
-    user-select: none;
-}
+        .logo {
+            font-size: 2em;
+            color: black;
+            user-select: none;
+        }
 
-.navigation a {
-    position: relative;
-    font-size: 1.1em;
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-}
+        .navigation a {
+            position: relative;
+            font-size: 1.1em;
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+        }
 
-.navigation .btnLogin-popup{
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid black;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1em;
-    color: black;
-    font-weight: 500;
-    margin-left: 40px;
-}
+        .title {
+            display: flex;
+            position: absolute;
+            top: 32.5%;
+            left: 37.5%;
+            transform: translate(-50%, -50%);
+        }
+
+        .navigation .btnLogin-popup {
+            width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid black;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: black;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: 0.5s;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza os botões horizontalmente */
+            justify-content: center; /* Centraliza os botões verticalmente */
+            position: absolute;
+            top: 47%;
+            left: 77%;
+            transform: translate(-50%, -50%);
+            width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid black;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: black;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: 0.5s;
+
+          }
+
+        .navigation .btnLogin-popup:hover {
+            background: #fff;
+            color: #162938;
+        }
+
+        .imagem-customizada {
+            position: absolute;
+            /* Define a posição absoluta */
+            top: 100px;
+            /* Define a posição superior */
+            left: 110px;
+            /* Define a posição à esquerda */
+        }
+
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+
+        .table {
+            position: absolute;
+            top: 60%;
+            /* Posiciona a 65% da parte superior da janela do navegador */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 5px;
+            /* Padding inside the box */
+            border-radius: 10px;
+            /* Rounded corners */
+            width: 1050px;
+            /* Set a width for the box */
+            max-width: 100%;
+            /* Define a largura máxima para evitar que a caixa seja mais larga que a tela */
+            border: 3px solid gray;
+        }
+
+        .table thead {
+            background-color: gray;
+        }
+
+        .container {
+            text-align: center;
+            /* Centraliza o conteúdo horizontalmente */
+        }
+
+        .table thead tr th {
+            font-size: 18px;
+            /* Valor menor */
+            font-weight: 600;
+            letter-spacing: 0.70px;
+            color: #ffffff;
+            opacity: 1;
+            padding: 12px;
+            vertical-align: top;
+            border: 3px solid #dee2e685;
+        }
+
+        .table thead tr td {
+            font-size: 12px;
+            /* Valor menor */
+            letter-spacing: 0.35px;
+            font-weight: normal;
+            color: #f1f1f1;
+            background-color: #3c3f44;
+            padding: 8px;
+            text-align: center;
+            border: 3px solid #dee2e685;
+        }
+
+        /* Estilos do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        input[type=text]
+        {
+            background-color: #f5f5f5; /* Light gray background */
+            border: 3px solid black; /* Gray border */
+            padding: 75px; /* Padding inside the box */
+            border-radius: 10px; /* Rounded corners */
+            width: 870px; /* Set a width for the box */
+            margin: 20px auto 0; /* Center the box horizontally and add 20px margin at the top */
+        }
+        
+        .custom-button {
+            top: 0;
+            left: 0;
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 4px auto; 
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        
+        .custom-button:hover {
+            background-color: #45a049;
+        }
+        
+        p {
+            font-family: Arial, sans-serif; /* Substitua Arial pelo nome da fonte desejada */
+        }

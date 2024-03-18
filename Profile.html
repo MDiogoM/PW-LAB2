@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Fundo Preto Opaco</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo preta com opacidade inicial de 50% */
+            /* Você pode ajustar o último valor (0.5 neste exemplo) para mudar a opacidade */
+            height: 100vh; /* Define a altura da página para ocupar toda a altura da janela do navegador */
+            margin: 0; /* Remove margens padrão */
+            display: flex;
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+        }
+        .content {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Controle de Opacidade do Fundo</h1>
+        <input type="range" min="0" max="1" step="0.1" value="0.5" id="opacityRange"> <!-- Range input para ajustar a opacidade -->
+        <br>
+        <span id="opacityValue">Opacidade: 0.5</span> <!-- Exibe o valor atual da opacidade -->
+    </div>
+
+    <script>
+        const opacityRange = document.getElementById('opacityRange');
+        const opacityValue = document.getElementById('opacityValue');
+        const body = document.body;
+
+        opacityRange.addEventListener('input', function() {
+            const opacity = this.value;
+            body.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`; // Atualiza a opacidade do fundo
+            opacityValue.textContent = `Opacidade: ${opacity}`; // Atualiza o valor exibido da opacidade
+        });
+    </script>
+</body>
+</html>
