@@ -11,12 +11,13 @@
       <header>
           <h2 class="logo">Mountain Web</h2>
           <nav class="navigation">
-              <input type="button" class="btnLogin-popup" value="Profile" onclick="openProfile()">
+              <input type="button" class="btnLogin-popup" value="Profile" onclick="window.location.href='Profile.html'">
               <input type="button" class="btnLogin-popup" value="Log out" onclick="window.location.href='LogOut.html'">
           </nav>
       </header>
 
       <input type="button" class="button-container" value="New Task" onclick="openProfile()">
+      <input type="button" class="button-containerr" value="Edit Task" onclick="openTask()">
 
   
       <div style="text-align: center;">
@@ -49,14 +50,31 @@
           <div class="modal-content">
               <span class="close" onclick="closeProfile()">&times;</span>
               <!-- Conteúdo do perfil aqui -->
-              <h1>Nova Tarefa</h1>
-              <p>Descrição
+              <h1>New task</h1>
+              <p class="logo">Description
               </p>
               <input type="text" id="texto" oninput="atualizarFrase()">
-              <button onclick="guardarFrase()">Guardar Frase</button>
-
+              <p class="logo">Date
+                <input type="date" class="meuInputDate" id="data"></p>
+            <button onclick="guardarFrase()" class="Save">Save</button>
           </div>
       </div>
+
+      <div id="TaskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTask()">&times;</span>
+            <!-- Conteúdo do perfil aqui -->
+            <h1>Edit Task</h1>
+            <p class="logo">Description
+            </p>
+            <input type="text" id="texto" oninput="atualizarFrase()">
+            <p class="logo">Date
+              <input type="date" class="meuInputDate" id="data"></p>
+          <button onclick="guardarFrase()" class="Save1">Save</button>
+          <button onclick="guardarFrase()" class="delete">Delete</button>
+
+        </div>
+    </div>
   
       <script>
           // Função para abrir o modal de profile
@@ -64,12 +82,22 @@
               document.getElementById("profileModal").style.display = "block";
           }
   
+          function openTask() {
+              document.getElementById("TaskModal").style.display = "block";
+          }
+
           // Função para fechar o modal de profile
           function closeProfile() {
               document.getElementById("profileModal").style.display = "none";
           }
+
+          function closeTask() {
+              document.getElementById("TaskModal").style.display = "none";
+          }
+
           function guardarFrase() {
     var inputTexto = document.getElementById("texto").value;
+    var inputData = document.getElementById("data").value; // Adicionei esta linha para obter o valor do campo de data
     var tarefasTable = document.getElementById("tarefasTable").getElementsByTagName('tbody')[0];
     var novaLinha = tarefasTable.insertRow();
     var colunaTarefa = novaLinha.insertCell(0);
@@ -77,10 +105,9 @@
     var colunaEstado = novaLinha.insertCell(2);
 
     colunaTarefa.innerHTML = inputTexto;
-    colunaData.innerHTML = new Date().toLocaleDateString(); // Adiciona a data atual
+    colunaData.innerHTML = inputData; // Define o valor da coluna de data como o valor do campo de data
     colunaEstado.innerHTML = '<div class="container"><input type="checkbox" name="meu_checkbox">&#160;</div>';
 }
-
 function atualizarFrase() {
     // Esta função pode ser mantida vazia, pois a atualização dinâmica é feita na função guardarFrase().
 }

@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Fundo Preto Opaco</title>
-    <style>
-        body {
-            background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo preta com opacidade inicial de 50% */
-            /* Você pode ajustar o último valor (0.5 neste exemplo) para mudar a opacidade */
-            height: 100vh; /* Define a altura da página para ocupar toda a altura da janela do navegador */
-            margin: 0; /* Remove margens padrão */
-            display: flex;
-            justify-content: center; /* Centraliza o conteúdo verticalmente */
-            align-items: center; /* Centraliza o conteúdo horizontalmente */
-        }
-        .content {
-            text-align: center;
-            color: white;
-        }
-    </style>
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="Profilestyle.css">
 </head>
 <body>
-    <div class="content">
-        <h1>Controle de Opacidade do Fundo</h1>
-        <input type="range" min="0" max="1" step="0.1" value="0.5" id="opacityRange"> <!-- Range input para ajustar a opacidade -->
-        <br>
-        <span id="opacityValue">Opacidade: 0.5</span> <!-- Exibe o valor atual da opacidade -->
+    <header>
+        <h2 class="logo">Mountain Web</h2>
+        <nav class="navigation">
+            <input type="button" class="btnLogin-popup" value="Profile" onclick="window.location.href='Profile.html'">
+            <input type="button" class="btnLogin-popup" value="Log out" onclick="window.location.href='LogOut.html'">
+        </nav>
+
+        <div class="title">
+            <h1 style="color:black;">Login</h1>
+          </div>
+
+    </header>
+        <div class="imagem-customizada">
+        <img src="Mountain-logo-Design-Graphics-9785421-1-580x435.png" height="300">
+    </div>
+    <div class="login-box">
+        <div class="input-columns">
+            <div class="input-container">
+                <label for="input1">Name</label>
+                <input type="text" id="input1" value="Marcelo">
+            </div>
+            <div class="input-containerr">
+                <label for="input2">Email</label>
+                <input type="text" id="input2" value="Marcelo@gmail.com">
+            </div>
+            <input type="button" class="custom-button" value="Save" onclick="window.location.href='main.html'">
+        </div>
     </div>
 
-    <script>
-        const opacityRange = document.getElementById('opacityRange');
-        const opacityValue = document.getElementById('opacityValue');
-        const body = document.body;
+    
 
-        opacityRange.addEventListener('input', function() {
-            const opacity = this.value;
-            body.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`; // Atualiza a opacidade do fundo
-            opacityValue.textContent = `Opacidade: ${opacity}`; // Atualiza o valor exibido da opacidade
-        });
+    <script>
+        // Qualquer script JavaScript necessário pode ser adicionado aqui
     </script>
 </body>
 </html>
