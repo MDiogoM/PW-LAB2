@@ -6,6 +6,36 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Estilos para o layout do usuário */
+        .user-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: inherit;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            margin: 180px 480px; /* 200px de margem superior e inferior, 500px de margem à esquerda e à direita */
+            max-width: 300px;
+            font-size: 40px; /* Define o tamanho da fonte como 16 pixels */
+        }
+        
+        
+        
+
+.user-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.user-info span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.user-info span:first-child {
+    font-weight: bold;
+}
+
+
         header {
             position: fixed;
             top: 0;
@@ -35,12 +65,13 @@
             margin-left: 40px;
         }
 
-        .title {
+        .title  {
             display: flex;
             position: absolute;
             top: 32.5%;
-            left: 37.5%;
+            left: 40%;
             transform: translate(-50%, -50%);
+            color: black;
         }
 
         .navigation .btnLogin-popup {
@@ -70,9 +101,9 @@
             color: white;
             font-weight: 750;
             margin-top: 90px;
-            margin-left: auto; /* Define a margem à esquerda como automática */
-            margin-right: auto; /* Define a margem à direita como automática */
-            display: block; /* Garante que o botão ocupe toda a largura disponível */
+            margin-left: auto; 
+            margin-right: auto; 
+            display: block; 
             transition: 0.5s;
         }
 
@@ -88,9 +119,9 @@
             color: white;
             font-weight: 750;
             margin-top: 90px;
-            margin-left: 0px; /* Define a margem à esquerda como automática */
-            margin-right: auto; /* Define a margem à direita como automática */
-            display: block; /* Garante que o botão ocupe toda a largura disponível */
+            margin-left: 0px; 
+            margin-right: auto; 
+            display: block; 
             transition: 0.5s;
         }
         
@@ -106,17 +137,17 @@
             color: white;
             font-weight: 750;
             margin-top: -50px;
-            margin-left: auto; /* Define a margem à esquerda como automática */
-            margin-right: 0px; /* Define a margem à direita como automática */
-            display: block; /* Garante que o botão ocupe toda a largura disponível */
+            margin-left: auto; 
+            margin-right: 0px; 
+            display: block; 
             transition: 0.5s;
         }
 
         .button-container {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centraliza os botões horizontalmente */
-            justify-content: center; /* Centraliza os botões verticalmente */
+            align-items: center; 
+            justify-content: center; 
             position: absolute;
             top: 47%;
             left: 67.5%;
@@ -138,8 +169,8 @@
           .button-containerr {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centraliza os botões horizontalmente */
-            justify-content: center; /* Centraliza os botões verticalmente */
+            align-items: center; 
+            justify-content: center; 
             position: absolute;
             top: 47%;
             left: 77%;
@@ -165,11 +196,8 @@
 
         .imagem-customizada {
             position: absolute;
-            /* Define a posição absoluta */
-            top: 100px;
-            /* Define a posição superior */
-            left: 110px;
-            /* Define a posição à esquerda */
+            top: 120px;
+            left: 235px;
         }
 
         .heading {
@@ -183,17 +211,12 @@
         .table {
             position: absolute;
             top: 60%;
-            /* Posiciona a 65% da parte superior da janela do navegador */
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 5px;
-            /* Padding inside the box */
             border-radius: 10px;
-            /* Rounded corners */
             width: 1050px;
-            /* Set a width for the box */
             max-width: 100%;
-            /* Define a largura máxima para evitar que a caixa seja mais larga que a tela */
             border: 3px solid gray;
         }
 
@@ -203,12 +226,10 @@
 
         .container {
             text-align: center;
-            /* Centraliza o conteúdo horizontalmente */
         }
 
         .table thead tr th {
             font-size: 18px;
-            /* Valor menor */
             font-weight: 600;
             letter-spacing: 0.70px;
             color: #ffffff;
@@ -220,7 +241,6 @@
 
         .table thead tr td {
             font-size: 12px;
-            /* Valor menor */
             letter-spacing: 0.35px;
             font-weight: normal;
             color: #f1f1f1;
@@ -230,7 +250,6 @@
             border: 3px solid #dee2e685;
         }
 
-        /* Estilos do modal */
         .modal {
             display: none;
             position: fixed;
@@ -267,12 +286,12 @@
 
         input[type=text]
         {
-            background-color: #f5f5f5; /* Light gray background */
-            border: 3px solid black; /* Gray border */
-            padding: 75px; /* Padding inside the box */
-            border-radius: 10px; /* Rounded corners */
-            width: 870px; /* Set a width for the box */
-            margin: 20px auto 0; /* Center the box horizontally and add 20px margin at the top */
+            background-color: #f5f5f5; 
+            border: 3px solid black; 
+            padding: 75px; 
+            border-radius: 10px; 
+            width: 870px; 
+            margin: 20px auto 0; 
         }
         
         .custom-button {
@@ -293,7 +312,7 @@
         }
         
         p {
-            font-family: Arial, sans-serif; /* Substitua Arial pelo nome da fonte desejada */
+            font-family: Arial, sans-serif; 
         }
 
         .meuInputDate {

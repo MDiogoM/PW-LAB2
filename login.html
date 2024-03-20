@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input com Título</title>
+<link rel="stylesheet" href="Loginstyle.css">
+</head>
+<body>
+    <div class="title">
+        <h1 style="color:black;">Login</h1>
+      </div>
+
+<!-- Caixa de login -->
+<div class="login-box">
+    <div class="input-columns">
+        <div class="input-container">
+            <label for="input1">Email</label>
+            <input type="text" id="input1">
+        </div>
+        <div class="input-containerr">
+            <label for="input2">Password</label>
+            <input type="text" id="input2">
+        </div>
+    </div>
+
+    <input type="button" class="button-container" value="Login" onclick="Login()">
+    <input type="button" class="custom-button" value="< Back" onclick="window.location.href='main.html'">
+    <div id="forgot-password" onclick="window.location.href='forgot_password.html'">Forgot Password?</div>
+</div>
+
+<div class="line">
+    <p>Copyright 2024 - All rights reserved by Diogo Machado.</p>
+
+</div>
+<script>
+    function Login() {
+            var email = document.getElementById("input1").value;
+            var password = document.getElementById("input2").value;
+
+            if (email === "Marcelo@gmail.com" && password === "senha123") {
+                window.location.href = "main.html";
+            } else {
+                alert("This account doesn't exist");
+            }
+        }
+</script>
+
+</body>
+</html>
